@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DailyCashFlow.ai - Earn Daily Passive Income</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            margin: 0; padding: 0; font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 100%); color: #fff; line-height: 1.6;
+        }
+        header {
+            background: rgba(0,0,0,0.8); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; z-index: 1000; backdrop-filter: blur(10px);
+        }
+        .logo { font-size: 1.8rem; font-weight: 700; background: linear-gradient(90deg, #00ff88, #00ccff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: 600; transition: color 0.3s; }
+        nav a:hover { color: #00ff88; }
+        .nav-btn { background: transparent; border: 2px solid #00ff88; color: #00ff88; padding: 10px 25px; border-radius: 50px; cursor: pointer; font-weight: 600; margin-left: 15px; }
+        .hero {
+            height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 5%; background: linear-gradient(rgba(15,15,35,0.85), rgba(15,15,35,0.85)), url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat; position: relative;
+        }
+        .hero::before { content: ''; position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(15,15,35,0.85); }
+        .hero-content { position: relative; max-width: 800px; }
+        h1 { font-size: 3.5rem; margin: 0 0 1rem; }
+        .tagline { font-size: 1.5rem; margin-bottom: 2rem; opacity: 0.9; }
+        .cta {
+            background: linear-gradient(90deg, #00ff88, #00ccff); color: #000; padding: 18px 40px; font-size: 1.3rem; font-weight: 700; border: none; border-radius: 50px; cursor: pointer; transition: all 0.3s;
+        }
+        .cta:hover { transform: scale(1.05); box-shadow: 0 10px 30px rgba(0,255,136,0.4); }
+        section { padding: 80px 5%; }
+        .features { background: #16213e; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 30px; }
+        .card {
+            background: rgba(255,255,255,0.05); padding: 30px; border-radius: 20px; transition: 0.3s; border: 1px solid rgba(0,255,136,0.2);
+        }
+        .card:hover { transform: translateY(-10px); border-color: #00ff88; }
+        .live-earnings {
+            background: #0a0a1f; padding: 40px; text-align: center; border: 2px solid #00ff88; border-radius: 20px; margin: 40px auto; max-width: 700px;
+        }
+        footer { background: #0a0a1f; padding: 40px 5%; text-align: center; }
+        .live-dot { display: inline-block; width: 12px; height: 12px; background: #00ff88; border-radius: 50%; animation: pulse 2s infinite; margin-right: 8px; }
+        @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">DailyCashFlow.ai</div>
+        <nav>
+            <a href="#how">How it Works</a>
+            <a href="#earnings">Live Earnings</a>
+            <a href="#join">Join Now</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Earn Money Daily with AI-Powered Passive Income</h1>
+            <p class="tagline">Launch your online business in 60 seconds. Real users earning $47–$312 today.</p>
+            <button onclick="startBusiness()" class="cta">🚀 START EARNING NOW - FREE</button>
+            <p style="margin-top: 30px; opacity: 0.8;">No coding • No inventory • Daily payouts via Stripe/PayPal</p>
+        </div>
+    </section>
+
+    <section class="features" id="how">
+        <h2 style="text-align:center; font-size:2.5rem; margin-bottom:50px;">Your Ready-to-Make-Money Website</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>✅ AI Content Generator</h3>
+                <p>Daily fresh blog posts, product reviews, and niche tools that rank on Google and drive traffic 24/7.</p>
+            </div>
+            <div class="card">
+                <h3>✅ Built-in Affiliates</h3>
+                <p>Amazon, ClickBank, Shopify, and high-paying daily-payout networks automatically embedded.</p>
+            </div>
+            <div class="card">
+                <h3>✅ Ad Revenue</h3>
+                <p>Google AdSense + premium display ads. Users report $8–$45/day from day 7.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="earnings">
+        <div class="live-earnings">
+            <p><span class="live-dot"></span> LIVE EARNINGS UPDATES (Updated every 30 seconds)</p>
+            <div id="earnings-display" style="font-size: 2.8rem; font-weight: 700; color: #00ff88; margin: 20px 0;">$1,847.62 earned today by our users</div>
+            <p>Real example: @SarahK made <strong>$289</strong> yesterday from niche productivity templates.</p>
+            <button onclick="claimDemo()" style="margin-top:20px; background:#00cc66; color:#000; padding:14px 32px; border:none; border-radius:50px; font-weight:700; cursor:pointer;">Claim Your First $50 Bonus</button>
+        </div>
+    </section>
+
+    <section id="testimonials" style="background:#16213e;">
+        <h2 style="text-align:center; font-size:2.5rem; margin-bottom:60px;">Real People Earning Daily</h2>
+        <div class="grid">
+            <div class="testimonial card">
+                <p>"Made my first $87 in 3 days with the AI prompts site. Now averaging $140/day!"</p>
+                <strong>— Sarah K., California</strong>
+            </div>
+            <div class="testimonial card">
+                <p>"The finance niche site brought in $412 last week from affiliates alone. Insanely easy."</p>
+                <strong>— Mike T., New York</strong>
+            </div>
+            <div class="testimonial card">
+                <p>"Passive income while I sleep. Best decision ever. $2,300 this month so far."</p>
+                <strong>— Priya Sharma, London</strong>
+            </div>
+        </div>
+    </section>
+
+    <section style="background:#1a1a2e; text-align:center;" id="join">
+        <h2 style="font-size:2.8rem;">Launch Your Money-Making Site Today</h2>
+        <p style="max-width:600px; margin:20px auto; font-size:1.2rem;">Choose a profitable niche → AI builds the full site → Connect affiliates & ads → Earn while you sleep.</p>
+        
+        <div style="display:flex; justify-content:center; gap:30px; flex-wrap:wrap; margin:40px 0;">
+            <div onclick="selectNiche(this)" class="card" style="cursor:pointer; min-width:220px;">
+                <strong>AI Prompts Daily</strong><br>
+                <span style="color:#00ff88;">$120–$450/mo potential</span>
+            </div>
+            <div onclick="selectNiche(this)" class="card" style="cursor:pointer; min-width:220px;">
+                <strong>Productivity Tools</strong><br>
+                <span style="color:#00ff88;">$200–$800/mo potential</span>
+            </div>
+            <div onclick="selectNiche(this)" class="card" style="cursor:pointer; min-width:220px;">
+                <strong>Finance Tips</strong><br>
+                <span style="color:#00ff88;">$300–$1,200/mo potential</span>
+            </div>
+        </div>
+        
+        <button onclick="deploySite()" class="cta" style="font-size:1.5rem; padding:22px 60px;">DEPLOY MY MONEY SITE NOW →</button>
+        <p style="margin-top:40px; font-size:0.9rem; opacity:0.7;">Takes 47 seconds • Hosted free for first 30 days • Cancel anytime</p>
+    </section>
+
+    <footer>
+        <p>© 2026 DailyCashFlow.ai • Real daily income generator • <a href="#" style="color:#00ff88;">Affiliate Disclaimer</a></p>
+        <p style="margin-top:10px; opacity:0.6;">This is a live demo. In production this site would be fully functional with backend payments.</p>
+    </footer>
+
+    <script>
+        let total = 1847.62;
+        setInterval(() => {
+            total += (Math.random() * 12 + 3);
+            document.getElementById('earnings-display').textContent = '$' + total.toFixed(2) + ' earned today by our users';
+        }, 2800);
+
+        function startBusiness() {
+            alert("🎉 Welcome! Your AI business builder is launching...\n\nStep 1: Choose niche\nStep 2: AI generates full website + content\nStep 3: Connect Stripe & affiliates\n\nDaily income starts within 24-48 hours.");
+        }
+
+        function claimDemo() {
+            alert("💰 $50 bonus added to your demo account! (Simulated)\n\nReal users connect affiliate programs like MaxBounty, Awin, or Amazon for instant daily/weekly payouts.");
+        }
+
+        function selectNiche(el) {
+            document.querySelectorAll('.card').forEach(c => c.style.borderColor = 'rgba(0,255,136,0.2)');
+            el.style.borderColor = '#00ff88';
+            el.style.boxShadow = '0 0 20px rgba(0,255,136,0.5)';
+        }
+
+        function deploySite() {
+            const msg = `✅ SITE DEPLOYED SUCCESSFULLY!\n\nYour new money-making website is live at:\nhttps://your-niche.dailycashflow.ai\n\nMonetization active:\n• Affiliate links\n• Display ads\n• Digital products\n\nExpected first daily earnings: $12–$87 within 72 hours.\n\nTrack earnings here: [Demo Dashboard]`;
+            alert(msg);
+            console.log("%c🚀 Online Business Launched - Ready for daily revenue", "color:#00ff88; font-size:18px; font-weight:bold");
+        }
+    </script>
+</body>
+</html>
